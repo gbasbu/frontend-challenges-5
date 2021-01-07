@@ -1,0 +1,229 @@
+/* Primary */
+$Lime-Green: hsl(163, 72%, 41%);
+$Bright-Red: hsl(356, 69%, 56%);
+
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram:hsl(37, 97%, 70%) , hsl(329, 70%, 58%);
+$YouTube: hsl(348, 97%, 39%);
+
+/* Dark Theme */
+$Very-Dark-Blue /*(BG)*/: hsl(230, 17%, 14%);
+$Very-Dark-Blue-Top /*(Top BG Pattern)*/: hsl(232, 19%, 15%);
+$Dark-Desaturated-Blue /*(Card BG)*/: hsl(228, 28%, 20%);
+$Desaturated-Blue /*(Text)*/: hsl(228, 34%, 66%);
+$White /*(Text)*/: hsl(0, 0%, 100%);
+
+/* Light Theme */
+$White /*(BG)*/: hsl(0, 0%, 100%);
+$Very-Pale-Blue /*(Top BG Pattern)*/: hsl(225, 100%, 98);
+$Light-Grayish-Blue /*(Card BG)*/: hsl(227, 47%, 96);
+$Dark-Grayish-Blue /*(Text)*/: hsl(228, 12%, 44%);
+$Very-Dark-Blue /*(Text)*/: hsl(230, 17%, 14%);
+
+body{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background-color: $Very-Dark-Blue;
+    h1,h2,h3,h4,h5,h6{
+        font-size: 1rem;
+    }
+    .top-section{
+        background-color: $Very-Dark-Blue-Top;
+        .col-sm,.col-md{
+            h1{
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $White;
+                @media only screen and(max-width:415px) {
+                    font-size: 1.3rem;
+                }
+            }
+            h3{
+                color: $Desaturated-Blue;
+                font-size: .8rem;
+                font-weight: 700;
+                margin-bottom: 25px;
+            }
+            hr{
+                color: $Desaturated-Blue;
+            }
+            span{
+                font-weight: 700;
+                font-weight: .8rem;
+                color: $White;
+                @media only screen and(max-width:768px) {
+                    color: $Desaturated-Blue;
+                }
+            }
+            .form-check-input{
+                width: 40px;
+                height: 20px;
+            }
+        }
+    }
+    .bottom-section{
+        margin-top: -130px;
+        @media only screen and(max-width:980px) {
+            margin-top: -120px;
+        }
+        .top{
+            border-top: 4px solid;
+            border-radius: 5px;
+        }
+        .col-lg{
+            background-color: $Dark-Desaturated-Blue;
+            &:hover{
+                background-color: hsl(231, 27%, 25%);
+                cursor: pointer;
+            }
+            .username{
+                color:$Desaturated-Blue;
+            }
+            .count{
+                font-size: 3.5rem;
+                font-weight: 700;
+            }
+            .count-bottom{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            .users{
+                color: $Desaturated-Blue;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                margin-top: -15px;
+                margin-bottom: 30px;
+            }
+            .up-count{
+                color: $Lime-Green;
+                font-weight: 700;
+                font-size: .8rem;
+            }
+            .down-count{
+                color: $Bright-Red;
+                font-weight: 700;
+                font-size: .8rem;
+            }
+        }
+        .facebook{
+            border-color: $Facebook;
+        }
+        .twitter{
+            border-color: $Twitter;
+        }
+        .instagram {
+            border-color:hsl(329, 70%, 58%);
+        }
+        .youtube{
+            border-color:$YouTube ;
+        }
+        h1{
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $White;
+            margin-left: 35px;
+            margin-top: -10px;
+        }
+        .bottom{
+            margin-top: -45px;
+            .text-right{
+                text-align: right;
+            }
+        }
+    }
+}
+
+.switch-wrap {
+    cursor: pointer;
+    background: linear-gradient(90deg , hsl(210, 78%, 56%) , hsl(146, 68%, 55%));
+    padding: 2px;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+  .switch {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr;
+    transition: .2s;
+    &::after {
+      content: '';
+      border-radius: 50%;
+      background: $Very-Dark-Blue-Top;
+      grid-column: 2;
+    }
+  }
+  input:checked {
+    + .switch {
+      grid-template-columns: 1fr 1fr 0fr; 
+      &::after {
+        background-color:$Very-Pale-Blue;
+      }
+    }
+  }
+
+.p-6{
+    padding: 60px;
+}
+.attribution{
+    color: white;
+}
+
+// Light Theme Settings //
+body.light-theme{
+    background-color: $White;
+    footer .attribution{
+        color: $Very-Dark-Blue;
+    }
+}
+body.light-theme .top-section{
+    background-color: $Very-Pale-Blue;
+    h1{
+        color: $Very-Dark-Blue;
+    }
+    h3{
+        color: $Dark-Grayish-Blue;
+    }
+    span{
+        color: $Dark-Grayish-Blue;
+    }
+    .switch-wrap{
+        background: transparent;
+        background-color:hsl(230, 22%, 74%);
+    }
+}
+body.light-theme .bottom-section{
+    .col-lg{
+        background-color: $Light-Grayish-Blue;
+        &:hover{
+            background-color:#e6e6e6;
+        }
+        .count{
+            color: $Very-Dark-Blue;
+        }
+        .username{
+            font-weight: 700;
+        }
+    }
+}
+body.light-theme .container{
+    .title{
+        color: $Dark-Grayish-Blue;
+    }
+    .count-bottom{
+        color: $Very-Dark-Blue;
+    }
+}
+
+
+
+
+

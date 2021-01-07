@@ -1,0 +1,209 @@
+/* Primary */
+/* Dark Theme */
+/* Light Theme */
+body {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  background-color: #1e202a;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-size: 1rem;
+}
+body .top-section {
+  background-color: #1f212e;
+}
+body .top-section .col-sm h1, body .top-section .col-md h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+@media only screen and (max-width: 415px) {
+  body .top-section .col-sm h1, body .top-section .col-md h1 {
+    font-size: 1.3rem;
+  }
+}
+body .top-section .col-sm h3, body .top-section .col-md h3 {
+  color: #8b97c6;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+body .top-section .col-sm hr, body .top-section .col-md hr {
+  color: #8b97c6;
+}
+body .top-section .col-sm span, body .top-section .col-md span {
+  font-weight: 700;
+  font-weight: 0.8rem;
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  body .top-section .col-sm span, body .top-section .col-md span {
+    color: #8b97c6;
+  }
+}
+body .top-section .col-sm .form-check-input, body .top-section .col-md .form-check-input {
+  width: 40px;
+  height: 20px;
+}
+body .bottom-section {
+  margin-top: -130px;
+}
+@media only screen and (max-width: 980px) {
+  body .bottom-section {
+    margin-top: -120px;
+  }
+}
+body .bottom-section .top {
+  border-top: 4px solid;
+  border-radius: 5px;
+}
+body .bottom-section .col-lg {
+  background-color: #252a41;
+}
+body .bottom-section .col-lg:hover {
+  background-color: #2f3451;
+  cursor: pointer;
+}
+body .bottom-section .col-lg .username {
+  color: #8b97c6;
+}
+body .bottom-section .col-lg .count {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+body .bottom-section .col-lg .count-bottom {
+  font-size: 2rem;
+  font-weight: 700;
+}
+body .bottom-section .col-lg .users {
+  color: #8b97c6;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: -15px;
+  margin-bottom: 30px;
+}
+body .bottom-section .col-lg .up-count {
+  color: #1db489;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+body .bottom-section .col-lg .down-count {
+  color: #dc414c;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+body .bottom-section .facebook {
+  border-color: #198ff5;
+}
+body .bottom-section .twitter {
+  border-color: #1ca0f2;
+}
+body .bottom-section .instagram {
+  border-color: #df4996;
+}
+body .bottom-section .youtube {
+  border-color: #c4032a;
+}
+body .bottom-section h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  margin-left: 35px;
+  margin-top: -10px;
+}
+body .bottom-section .bottom {
+  margin-top: -45px;
+}
+body .bottom-section .bottom .text-right {
+  text-align: right;
+}
+
+.switch-wrap {
+  cursor: pointer;
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+  padding: 2px;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+}
+.switch-wrap input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  transition: 0.2s;
+}
+.switch::after {
+  content: "";
+  border-radius: 50%;
+  background: #1f212e;
+  grid-column: 2;
+}
+
+input:checked + .switch {
+  grid-template-columns: 1fr 1fr 0fr;
+}
+input:checked + .switch::after {
+  background-color: #f5f7ff;
+}
+
+.p-6 {
+  padding: 60px;
+}
+
+.attribution {
+  color: white;
+}
+
+body.light-theme {
+  background-color: white;
+}
+body.light-theme footer .attribution {
+  color: #1e202a;
+}
+
+body.light-theme .top-section {
+  background-color: #f5f7ff;
+}
+body.light-theme .top-section h1 {
+  color: #1e202a;
+}
+body.light-theme .top-section h3 {
+  color: #63687e;
+}
+body.light-theme .top-section span {
+  color: #63687e;
+}
+body.light-theme .top-section .switch-wrap {
+  background: transparent;
+  background-color: #aeb3cb;
+}
+
+body.light-theme .bottom-section .col-lg {
+  background-color: #f0f2fa;
+}
+body.light-theme .bottom-section .col-lg:hover {
+  background-color: #e6e6e6;
+}
+body.light-theme .bottom-section .col-lg .count {
+  color: #1e202a;
+}
+body.light-theme .bottom-section .col-lg .username {
+  font-weight: 700;
+}
+
+body.light-theme .container .title {
+  color: #63687e;
+}
+body.light-theme .container .count-bottom {
+  color: #1e202a;
+}
+
+/*# sourceMappingURL=style.css.map */

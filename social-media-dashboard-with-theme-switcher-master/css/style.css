@@ -126,39 +126,45 @@ body .bottom-section .bottom .text-right {
   text-align: right;
 }
 
-.switch-wrap {
-  cursor: pointer;
+.form-switch {
   background: linear-gradient(90deg, #378fe6, #3eda82);
-  padding: 2px;
+  padding: 3px;
   width: 40px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
-.switch-wrap input {
-  position: absolute;
+.form-switch input {
+  cursor: pointer;
+  right: 0;
   opacity: 0;
-  width: 0;
-  height: 0;
+  padding: 11px;
+  margin-top: -3px;
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+  background-repeat: no-repeat;
+}
+.form-switch input:focus {
+  opacity: 1;
+}
+.form-switch input:checked {
+  opacity: 0;
+}
+.form-switch input:checked + .switch {
+  grid-template-columns: 1fr 1fr 0fr;
+}
+.form-switch input:checked + .switch::after {
+  background-color: #f5f7ff;
 }
 
 .switch {
   height: 100%;
   display: grid;
   grid-template-columns: 0fr 1fr 1fr;
-  transition: 0.2s;
 }
 .switch::after {
   content: "";
   border-radius: 50%;
   background: #1f212e;
   grid-column: 2;
-}
-
-input:checked + .switch {
-  grid-template-columns: 1fr 1fr 0fr;
-}
-input:checked + .switch::after {
-  background-color: #f5f7ff;
 }
 
 .p-6 {
@@ -188,8 +194,12 @@ body.light-theme .top-section h3 {
 body.light-theme .top-section span {
   color: #63687e;
 }
-body.light-theme .top-section .switch-wrap {
+body.light-theme .top-section .form-switch {
   background: transparent;
+  background-color: #aeb3cb;
+}
+body.light-theme .top-section .form-switch input:focus {
+  opacity: 1;
   background-color: #aeb3cb;
 }
 

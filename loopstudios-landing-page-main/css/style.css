@@ -321,6 +321,7 @@ header div h1 {
 }
 .second-section .gallery .grid-item {
   position: relative;
+  cursor: pointer;
 }
 .second-section .gallery .grid-item:hover span {
   color: black;

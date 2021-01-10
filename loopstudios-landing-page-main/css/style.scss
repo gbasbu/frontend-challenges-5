@@ -269,6 +269,7 @@ header{
         }
         .grid-item{
             position: relative;
+            cursor: pointer;
             &:hover{
                 span{
                     color: $Black;
